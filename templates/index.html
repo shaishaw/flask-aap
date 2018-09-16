@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block head %}
+  <script src="{{ url_for('static', filename='helper.js') }}"></script>
+{% endblock %}
+{% block body %}
+  {% if session.username %}
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Shell Path</th>
+          <th>Home Directory</th>
+          <th> </th>
+        </tr>
+      </thead>
+
+      <tbody>
+      {% for key in data.users %}
+        <tr class="{{ loop.cycle('odd', 'even') }}">
+          <td>{{ data.users[key]['username'] }}</td>
+          <td>{{ data.users[key]['shell'] }}</td>
+          <td>{{ data.users[key]['homedir'] }}</td>
+          <td>
+            <a href="{{ url_for('edit', username=data.users[key]['username']) }}">Edit</a>
+            <a href="{{ url_for('remove', username=data.users[key]['username']) }}" onclick="return userdel(this);">Remove</a>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+
+    </table>
+  {% else %}
+    <p>You are not logged in...</p>
+  {% endif %}
+{% endblock %}

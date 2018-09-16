@@ -1,0 +1,144 @@
+body {
+ font-family: sans-serif;
+ background: #eee;
+}
+a, h1, h2 {
+ color: #377ba8;
+}
+h1, h2 {
+ font-family: 'Georgia', serif;
+ margin: 0;
+}
+h1 { 
+border-bottom: 2px solid #0063ff;
+}
+h2 {
+ font-size: 1.2em;
+ padding-bottom: 1em;
+}
+
+.page {
+ margin: 2em auto;
+ width: 60em;
+ border: 1px solid #ccc;
+ padding: 0.8em;
+ background: white;
+}
+.entries {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+.entries li {
+ margin: 0.8em 1.2em;
+}
+.entries li h2 {
+ margin-left: -1em;
+}
+.add-entry {
+ font-size: 0.9em;
+ border-bottom: 1px solid #ccc;
+}
+.add-entry dl {
+ font-weight: bold;
+}
+.topnav {
+ text-align: right;
+ font-size: 1.2em;
+ padding: 0.3em;
+ margin-bottom: 1em;
+ /*background: #ccc;*/
+ margin-top: 0.5em;
+}
+.topnav a {
+ margin-left: 10px;
+ color: #fff;
+ text-decoration: none;
+ padding: 0.4em;
+ border-radius: 6px;
+ background: #777;
+}
+.flash-success, .flash-error, .flash-notice, .flash-warning {
+ padding: 0.5em;
+ margin-bottom: 0.5em;
+ border-radius: 6px;
+}
+.flash-success {
+ background: #e9ffd9;
+ border: 1px solid #a6ca8a;
+}
+.flash-error {
+ background: #ffecec;
+ border: 1px solid #f5aca6;
+}
+.flash-notice {
+ background: #e3f7fc;
+ border: 1px solid #8ed9f6;
+}
+.flash-warning {
+ background: #fff8c4;
+ border: 1px solid #f2c779;
+}
+.error {
+ background: #f0d6d6;
+ padding: 0.5em;
+}
+.row {
+ margin-bottom: 0.5em;
+}
+label {
+ width: 200px;
+}
+table{
+ border-collapse: collapse;
+ border-spacing: 0;
+ width:100%;
+ height:100%;
+ margin:0;
+ padding:0;
+}
+tbody tr:hover td{
+ background-color:#88c4ff;
+}
+tbody tr:nth-child(odd) {
+ background-color:#aad4ff;
+}
+tbody tr:nth-child(even){
+ background-color:#d3e9ff;
+}
+td, th {
+ vertical-align:middle;
+ border:1px solid #ffffff;
+ border-width:0px 1px 1px 0px;
+ text-align:left;
+ padding:8px;
+ font-size:.9em;
+ font-family:Arial;
+ font-weight:normal;
+ color:#000000;
+}
+tr:last-child td {
+ border-width:0px 1px 0px 0px;
+}
+tr td:last-child {
+ border-width:0px 0px 1px 0px;
+}
+tr:last-child td:last-child {
+ border-width:0px 0px 0px 0px;
+}
+tr:first-child th {
+ background-color:#0057af;
+ border:0px solid #ffffff;
+ text-align:center;
+ border-width:0px 0px 1px 1px;
+ font-size:1em;
+ font-family:Arial;
+ font-weight:bold;
+ color:#ffffff;
+}
+tr:first-child th:first-child {
+ border-width:0px 0px 1px 0px;
+}
+tr:first-child th:last-child {
+ border-width:0px 0px 1px 1px;
+}

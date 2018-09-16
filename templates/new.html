@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form action="{{ url_for('new') }}" method=post>
+    <div class=row>
+      <label for=username>Username: </label>
+      <input type=text name=username value="{{ data.username or '' }}">
+    </div>
+    <div class=row>
+      <label for=shellpath>Shell Path: </label>
+      <input type=text name=shellpath value="{{ data.shellpath or '' }}">
+    </div>
+    <div class=row>
+      <label for=homedir>Home Directory: </label>
+      <input type=text name=homedir value="{{ data.homedir or '' }}">
+    </div>
+    <div class=row>
+      <label for=password>Password: </label>
+      <input type=password name=password value="{{ data.password or '' }}">
+    </div>
+    <div class=row>
+      <label for=password1>Verify Password: </label>
+      <input type=password name=password1 value="{{ data.password1 or '' }}">
+    </div>
+    <div class=row>
+      <label for=sudo>Grant Sudo: </label>
+      <input type=checkbox name=sudo {{ 'checked' if data.sudo }}>
+    </div>
+
+    <div class=row>
+      <input type=submit value=Submit>
+    </div>
+  </form>
+{% endblock %}
